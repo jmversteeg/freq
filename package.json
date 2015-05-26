@@ -23,6 +23,7 @@
     "gulp-rename":           "^1.2.2",
     "gulp-sass":             "^2.0.0",
     "gulp-sourcemaps":       "^1.5.2",
+    "jquery":                "^2.1.4",
     "materialize-css":       "^0.96.1",
     "mocha":                 "^2.2.4",
     "sinon":                 "^1.14.1",

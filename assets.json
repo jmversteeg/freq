@@ -3,6 +3,7 @@
     "./node_modules/materialize-css/bin/materialize.css"
   ],
   "js": [
+    "./node_modules/jquery/dist/jquery.min.js",
     "./node_modules/materialize-css/bin/materialize.js"
   ]
 }
