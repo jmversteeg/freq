@@ -1,0 +1,13 @@
+install:
+ - npm install
+
+build:
+ - npm test
+ - gulp --dist
+
+purge:
+ - assets
+ - node_modules
+ - test
+ - ".*"
+ - "assets.json"
