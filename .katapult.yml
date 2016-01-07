@@ -6,8 +6,4 @@ build:
  - gulp --dist
 
 purge:
- - assets
- - node_modules
- - test
- - ".*"
- - "assets.json"
+ - "!web"

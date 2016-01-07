@@ -1,36 +1,36 @@
 'use strict';
 
-var gulp         = require('gulp');
-var sass         = require('gulp-sass');
-var gulpif       = require('gulp-if');
-var rename       = require('gulp-rename');
-var concat       = require('gulp-concat');
-var sourcemaps   = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
-var browserify   = require('browserify');
-var babelify     = require('babelify');
-var handlebars   = require('browserify-handlebars');
-var buffer       = require('vinyl-buffer');
-var source       = require('vinyl-source-stream');
+const gulp         = require('gulp');
+const sass         = require('gulp-sass');
+const gulpif       = require('gulp-if');
+const rename       = require('gulp-rename');
+const concat       = require('gulp-concat');
+const sourcemaps   = require('gulp-sourcemaps');
+const autoprefixer = require('gulp-autoprefixer');
+const browserify   = require('browserify');
+const babelify     = require('babelify');
+const handlebars   = require('browserify-handlebars');
+const buffer       = require('vinyl-buffer');
+const source       = require('vinyl-source-stream');
 
-var argv = require('yargs').argv;
+const argv = require('yargs').argv;
 
-var flags = {
+const flags = {
     dev: !argv.dist
 };
 
-var paths = {
+const paths = {
     assets: require('./assets.json'),
     dist:   "./web/dist"
 };
 
-var browserified = function (entry, sourceName) {
+const browserified = function (entry, sourceName) {
     return browserify({
         entries: entry,
         debug:   flags.dev
     })
         .transform(handlebars)
-        .transform(babelify)
+        .transform(babelify, {'presets': ['es2015', 'react']})
         .bundle()
         .pipe(source(sourceName))
         .pipe(buffer());
