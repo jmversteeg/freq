@@ -1,0 +1,9 @@
+install:
+ - npm install
+
+build:
+ - npm test
+ - gulp --dist
+
+purge:
+ - "!web"
