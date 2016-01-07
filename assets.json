@@ -1,9 +1,8 @@
 {
-  "css":     [
-    "./node_modules/materialize-css/bin/materialize.css"
+  "css": [
   ],
   "js": [
     "./node_modules/jquery/dist/jquery.min.js",
-    "./node_modules/materialize-css/bin/materialize.js"
+    "./node_modules/bootstrap/dist/bootstrap.min.js"
   ]
 }
